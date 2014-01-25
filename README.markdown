@@ -1,37 +1,41 @@
-api-rest-node
-=============
+\#api-rest-node
+
 
 Base de uma API REST escrita com Node.js e MySQL
 
 para essa base utilizei a seguinte estrutura de dados no banco:
 
-<code>
-CREATE TABLE IF NOT EXISTS `exemplo` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(255) NOT NULL,
-  `status` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+`
+CREATE TABLE IF NOT EXISTS exemplo ( 
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nome varchar(255) NOT NULL,
+  status int(11) NOT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+`
 
-
-INSERT INTO `exemplo` (`id`, `nome`, `status`) VALUES
+`
+INSERT INTO exemplo (id, nome, status) VALUES
 (1, 'Victor', 1),
 (2, 'Lala', 2);
+`
 
-
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `token` varchar(32) NOT NULL,
-  `status` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+`
+CREATE TABLE IF NOT EXISTS usuarios (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(255) NOT NULL,
+  token varchar(32) NOT NULL,
+  status int(11) NOT NULL,
+  PRIMARY KEY (id)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
-INSERT INTO `usuarios` (`id`, `username`, `token`, `status`) VALUES
+`
+`
+INSERT INTO usuarios (id, username, token, status) VALUES
 (1, '58800f77afdb5e8d70f1e1e344d22899', '092bef459d7bb3a8cad2c7bcf31c0431', 1);
-</code>
+`
 Para fazer um teste de PHP execute o seguinte código:
-
+`
 <?php
 //classe que faz comunicação com REST 
 class Rest{
@@ -63,4 +67,4 @@ class Rest{
 $Rest = new Rest();
 
 //exibindo dados retornados
-echo $Rest->getOne(1);
+echo $Rest->getOne(1);`
