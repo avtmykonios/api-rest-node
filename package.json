@@ -1,10 +1,10 @@
 {
-  "name": "api-rest",
-  "version": "0.0.1",
+  "name": "api-rest-base",
+  "description": "Uma API base para desenvolvimento em REST com Express e MySQL",
+  "author" : "Victor Toupitzen Specian",
+  "email" : "victorts1991@gmail.com",
+  "version": "0.0.2",
   "private": true,
-  "scripts": {
-    "start": "node app.js"
-  },
   "dependencies": {
     "express": "3.4.0",
     "express-load": "*.*",
