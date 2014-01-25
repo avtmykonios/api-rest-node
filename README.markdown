@@ -5,6 +5,7 @@ Base de uma API REST escrita com Node.js e MySQL
 
 para essa base utilizei a seguinte estrutura de dados no banco:
 
+<code>
 CREATE TABLE IF NOT EXISTS `exemplo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -28,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `username`, `token`, `status`) VALUES
 (1, '58800f77afdb5e8d70f1e1e344d22899', '092bef459d7bb3a8cad2c7bcf31c0431', 1);
-
+</code>
 Para fazer um teste de PHP execute o seguinte código:
 
 <?php
