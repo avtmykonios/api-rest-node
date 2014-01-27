@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 INSERT INTO usuarios (id, username, token, status) VALUES
-(1, '58800f77afdb5e8d70f1e1e344d22899', '092bef459d7bb3a8cad2c7bcf31c0431', 1);
+(1, 'specian', '092bef459d7bb3a8cad2c7bcf31c0431', 1);
 ```
 
 Após baixar os arquivos e configurar o banco de dados, você pode fazer um teste em PHP consumindo 
@@ -40,7 +40,7 @@ class Rest{
 
 	function getOne($id){
 		//url de acesso
-		$url = "http://localhost:3000/exemplos/".$id."?username=".md5("specian")."&token=".md5("specian#123mudar");
+		$url = "http://localhost:3000/exemplos/".$id."?username=specian&token=".md5("specian#123mudar");
 
 		//inicializando o curl
 		$curl = curl_init();
