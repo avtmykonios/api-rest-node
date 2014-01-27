@@ -1,4 +1,4 @@
-api-rest-node
+api-rest-node - teste
 ============
 
 Base de uma API REST escrita com Node.js e MySQL.
